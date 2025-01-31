@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Herbal Garden</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Virtual Herbal Garden</h1>
+            <p>Explore the medicinal plants with AYUSH</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About Us.</a></li>
+                    <li><a href="#plants">Our Constituents</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" id="login-signup-btn" class="btn-nav">Login/Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login/Sign Up</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <button type="submit" class="btn">Login</button>
+                <p>Don't have an account? <a href="#" id="signup-link">Sign Up</a></p>
+            </form>
+            
+            <form id="signup-form" style="display: none;">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+    
+                <button type="submit" class="btn">Sign Up</button>
+                <p>Already have an account? <a href="#" id="login-link">Login</a></p>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('modal');
+            const loginSignupBtn = document.getElementById('login-signup-btn');
+            const closeBtn = document.getElementsByClassName('close')[0];
+            const signupLink = document.getElementById('signup-link');
+            const loginLink = document.getElementById('login-link');
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+
+            loginSignupBtn.onclick = function() {
+                modal.style.display = 'block';
+            }
+
+            closeBtn.onclick = function() {
+                modal.style.display = 'none';
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                }
+            }
+
+            signupLink.onclick = function(e) {
+                e.preventDefault();
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            }
+
+            loginLink.onclick = function(e) {
+                e.preventDefault();
+                signupForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            }
+        });
+    </script>
+
+
+<section id="hero">
+    <video autoplay muted loop id="hero-video">
+        <source src="assets/vid1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+        <h1 id="ab">Welcome to AYUSH</h1>
+        <p id="ab">Explore the power of Ayurveda, Yoga, Naturopathy, Unani, Siddha, and Homeopathy</p>
+        <a href="#plants" class="btn">Discover More</a>
+    </div>
+</section>
+<br>
+
+    
+
+    <section id="about" class="container">
+        <h2 id="ab">About Us</h2>
+        <p>Our Virtual Herbal Garden offers an immersive and interactive way to learn about the medicinal plants used in Ayurveda, Yoga, Unani, Siddha, and Homeopathy (AYUSH). Explore our vast collection and deepen your understanding of the healing power of nature.</p>
+    </section>
+    <br>
+
+    <section id="plants" class="container">
+        <h2><u>Our Constituents</u></h2>
+        <hr>
+        <div class="plant-card">
+            <img src="assets/shrubs.jpeg" alt="Tulsi Plant">
+            <h3><a href="shrubs.html">Shrubs</h3></a>
+            <p>Medicinal shrubs are plants used for their therapeutic properties, offering remedies for various ailments. These shrubs often provide essential oils, compounds, and extracts that are integral to traditional and modern herbal medicine.</p>
+        </div>
+        <div class="plant-card">
+            <img src="assets/herbs.jpeg" alt="Neem Plant">
+            <h3><a href="herbs.html">Herbs</h3></a>
+            <p>Medicinal herbs are plants uused for their healing properties, often in the form of teas, tinctures or extracts, These herbs contain active compounds that can help alleviate symptoms and support overall health.</p>
+        </div>
+        
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <p>Our process to make this virtual herbal garden is completely dermatologist tested so as to avoid any kind of chemical or sulphate uses for the making and selling of the product. Hope our herbal garden would reach your needs and helps you guide towards us. Thank You. Visit us again.</p>
+            
+            <br><hr><br>
+            <h2>Contact Us</h2>
+            <p>Have questions? Reach out to us via email at <a href="mailto:info@swasthyalife.com">info@swasthyalife.com</a></p>
+            <p>Follow us on social media:</p>
+            <ul class="social-media">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+
+            <section id="contact">
+                <div class="container">
+                    <h2>Contact Form</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                        <p id="responseMessage"></p>
+                    </form>
+                </div>
+            </section>
+            
+        </div>
+    </footer>
+</body>
+</html>

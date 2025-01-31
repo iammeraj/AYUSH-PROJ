@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #shrubs {
+    padding: 4rem 0;
+    background: url('assets/shrubbg.jpeg') no-repeat center center/cover;
+    color: white;
+    
+}
+/* Container for the plant cards */
+/* Container for the plant cards */
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted to auto-fit for responsive design */
+    gap: 2rem; /* Adds space between the cards */
+    margin: 2rem 0;
+}
+
+/* Plant card styling */
+.plant-card {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Ensures card takes up full width of grid cell */
+    max-width: 300px; /* Caps the width so it doesn't become too wide */
+    margin: 0 auto; /* Center aligns cards within their grid cells */
+}
+
+/* Image in the card */
+.plant-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Plant card title */
+.plant-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* Plant card description */
+.plant-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .plant-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .plant-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .plant-card {
+        width: 100%; /* Full width on mobile */
+        max-width: none; /* Remove the width cap */
+    }
+}
+
+  </style>
+</head>
+<body>
+  <section id="shrubs" class="container">
+    <h2 id="ab">Explore the Herbs and Shrubs of Ayurveda</h2>
+    <div class="plant-grid">
+    <div class="plant-card">
+        <img src="assets/ayurshrub.jpeg" alt="Ayurveda Plant">
+        <h3><a href="bothayurvedas.html" style="text-decoration: none;">Herbs of Ayurveda</a></h3>
+        <h2>1.Turmeric</h2> 
+        <p>Turmeric is a bright yellow-orange spice that comes from the root of a plant in the ginger family. It's native to South Asia, especially India, where it has been used for thousands of years in cooking and medicine. It is one of the most commonly found spice in an Indian house. It is very helpful to treat skin diseases and wounds.</p>
+        <h2>2.Brahmi</h2>
+        <p>Brahmi(herb)
+          It is a very popular plant used for making Ayurvedic hair oil that provides strength to hair and also prevents hair loss. It is also use to prepare medicinal oils that are used to treat several muscle and skin problem.
+          Medicinal use
+          Its most common use is in making hair oil that helps in strengthening hair and also prevents hair loss
+          </p>
+    </div>
+    <div class="plant-card">
+        <img src="assets/yogashruub.jpeg" alt="Yoga and Naturopathy">
+        <h3><a href="yogashrub.html" style="text-decoration: none;">Shrubs of Ayurveda</a></h3>
+        <h2>1.Tulsi </h2>
+        <p> Also known as Holy Basil, this plant is revered for its ability to promote health and well-being. It's often used to treat respiratory conditions, fevers, and skin issues.</p>
+        <h2>2.Neem</h2>
+        <p>A powerful detoxifying shrub, Neem is used in Ayurveda to treat skin conditions, purify the blood, and support dental health.</p>
+      </div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #56c648;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+/* Assuming your login/signup menu is within a nav element */
+nav {
+    position: relative; /* Ensure the nav is positioned relative to other elements */
+    z-index: 1000; /* Give it a higher z-index than the hero section */
+}
+
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    position: sticky;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+header nav .btn-nav {
+    background: #4caf50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header nav .btn-nav:hover {
+    background: #45a049; 
+}
+
+.btn {
+    background: #4caf50;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#about, #plants, #contact {
+    padding: 4rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+h2 {
+    align-self: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+#ab {
+    color: darkgoldenrod;
+}
+
+#plants {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plant-card {
+    background: #f9f9f9;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+   
+}
+
+.plant-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.plant-card h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+}
+#about {
+    background: url('assets/about.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+#about p {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+#plants {
+    background: url('assets/plants1.jpeg') no-repeat center center/cover;
+    padding: 4rem 0 6rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.plant-card {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .plant-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .plant-card {
+        width: 100%;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    text-align: center;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal label {
+    margin-top: 10px;
+}
+
+.modal input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal .btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.modal .btn:hover {
+    background-color: #45a049;
+}
+
+/* Additional Styling */
+.btn-nav {
+    background: #4caf50;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-nav:hover {
+    background: #45a049; /* Slightly darker green on hover */
+}
+
+
+
+
+
+/*
+shrubs
+*/
+/* Style for Shrubs Page */
+
+#shrubs {
+    padding: 4rem 0;
+    background: url('assets/shrubbg.jpeg') no-repeat center center/cover;
+    color: white;
+    
+}
+/* Container for the plant cards */
+/* Container for the plant cards */
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted to auto-fit for responsive design */
+    gap: 2rem; /* Adds space between the cards */
+    margin: 2rem 0;
+}
+
+/* Plant card styling */
+.plant-card {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Ensures card takes up full width of grid cell */
+    max-width: 300px; /* Caps the width so it doesn't become too wide */
+    margin: 0 auto; /* Center aligns cards within their grid cells */
+}
+
+/* Image in the card */
+.plant-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Plant card title */
+.plant-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+/* Plant card description */
+.plant-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .plant-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .plant-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+
+    .plant-card {
+        width: 100%; /* Full width on mobile */
+        max-width: none; /* Remove the width cap */
+    }
+}
+
+
+/* Hero section styling */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the video doesn't overflow the hero section */
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1; /* Place the video behind the content */
+}
+
+/* Content inside the hero section */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.hero-content .btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+#ti:hover{
+    color: green;
+}
+
